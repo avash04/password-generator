@@ -24,11 +24,21 @@ function passwordGenerator(includeLength,includeLower,includeUpper,includeSymbol
    return password;
     
 }
+const btn=document.getElementById("submit");
+const heading=document.getElementById("topText");
+const para=document.getElementById("result");
 
+btn.onclick=function(){
 const includeLength=12;
 const includeLower=true;
 const includeUpper=true;
 const includeSymbol=true;
 
 const password=passwordGenerator(includeLength,includeLower,includeUpper,includeSymbol);
-console.log(`Generated password:${password}`);
+heading.textContent="YOUR GENERATED PASSWORD IS:";
+para.textContent=password;
+para.style.color="blue";
+para.style.textAlign="center";
+heading.style.textAlign="center";
+
+}
